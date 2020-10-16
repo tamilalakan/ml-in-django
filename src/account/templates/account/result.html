@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<title>Result</title> 
+
+
+<style type="text/css">
+	 * {
+    box-sizing: border-box;
+  }
+
+
+	.example_e {
+		border: none;
+		background: #404040;
+		color: #ffffff !important;
+		font-weight: 100;
+		padding: 10px;
+		text-transform: uppercase;
+		border-radius: 6px;
+		display: inline-block;
+		transition: all 0.3s ease 0s;
+		}
+	.example_e:hover {
+		color: #404040 !important;
+		font-weight: 700 !important;
+		letter-spacing: 3px;
+		background: none;
+		-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+		-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+		transition: all 0.3s ease 0s;
+		}
+
+			  /* Add a card effect for articles */
+	.card {
+		background-color: white;
+		padding: 50px;
+		margin-top: 20px;
+		}
+
+	.leftcolumn {   
+		float: center;
+		border-radius: 20px;
+		padding-left: 100px;
+		padding-right: 100px;
+}
+</style>
+
+
+<div class="leftcolumn">
+<div class="card" class="a" style="border-radius: 20px;"> 
+  <h4 style="text-align: center;">Result:</h4></a>
+  {% if result1 %}
+  	<p style="text-align: center;">{{result1}}</p>
+
+  {% elif result2 %}
+  	<p style="text-align: center;">{{result2}}</p>
+
+  {% elif result3 %}
+  	<p style="text-align: center;">{{result3}}</p>
+  {% endif %}
+
+
+</div>
+<br>
+
+<form>
+	{% if result1 %}
+		<div class="back" class="button_cont" align="center" class = "example_e">
+			<a class="example_e" href="{% url 'project_summerize' %}" style="text-decoration: none;" rel="nofollow noopener">Back</a></div>
+	{% elif result2 %}
+		<div class="back" class="button_cont" align="center" class = "example_e">
+			<a class="example_e" href="{% url 'url_summerize' %}" style="text-decoration: none;" rel="nofollow noopener">Back</a>
+		</div>
+
+	{% elif result3 %}
+		<div class="back" class="button_cont" align="center" class = "example_e">
+			<a class="example_e" href="{% url 'upload' %}" style="text-decoration: none;" rel="nofollow noopener">Back</a>
+		</div>
+
+	{% endif %}
+
+</form>
+
+
+
+
+
+{% endblock content %}

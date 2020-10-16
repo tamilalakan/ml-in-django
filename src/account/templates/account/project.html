@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<title>Summarizing</title>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  /* Add a gray background color with some padding */
+  body {
+    font-family: Arial;
+    padding: 10px;
+    background: #f1f1f1;
+    border-radius: 25px;
+  }
+   a:link {
+    text-decoration: black;
+  }
+
+  a:visited {
+    text-decoration: black;
+  }
+  a:hover {
+     text-decoration: underline;
+  }
+  a { color: inherit; } 
+
+  /* Header/Blog Title */
+  .header {
+    padding: 10px;
+    font-size: 40px;
+    text-align: center;
+    background: white;
+    border-radius: 20px;
+  }
+
+  /* Create two unequal columns that floats next to each other */
+  /* Left column */
+  .leftcolumn {   
+    float: left;
+    width: 50%;
+    border-radius: 20px;
+    padding-left: 20px;
+  }
+
+  /* Right column */
+  .rightcolumn {
+    float: right;
+    width: 50%;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+  }
+
+
+  /* Add a card effect for articles */
+  .card {
+     background-color: white;
+     padding: 70px;
+     margin-top: 20px;
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+ 
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+      width: 100%;
+      padding: 10;
+    }
+
+
+</style>
+
+<div class="header">
+  <h2>Summarizing Text</h2>
+</div>
+
+<div class="row" >
+  <div class="leftcolumn">
+    <div class="card" class="a" style="border-radius: 20px;"> 
+      <a href="{% url 'project_summerize' %}"><h4 style="text-align: center;">Paragraph Summarizing</h4></a>
+    </div>
+    <div class="card" style="border-radius: 20px;">
+      <a href="{% url 'upload' %}"><h4 style="text-align: center;">File Summarizing</h4>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card" class="a" style="border-radius: 20px;">
+      <a href="{% url 'url_summerize' %}"><h4 style="text-align: center;">URL Summarizing</h4></a>
+    </div>
+    <div class="card" style="border-radius: 20px;">
+      <h4 style="text-align: center;">Compare other Libraries</h4>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

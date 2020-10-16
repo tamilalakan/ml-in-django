@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Paragraph Summarizing</title>
+	<style type="text/css">
+		body{
+			font-family: Arial;
+			padding: 10px;
+			background: #f1f1f1;
+			border-radius: 25px;
+		}
+		.centercolumn {   
+			  float: center;
+			  /*width: 70%;*/
+			  border-radius: 30px;
+			  padding-left: 300px;
+			  padding-right: 0px;
+			  padding-top: 90px;
+			}
+		.header {
+			  padding: 30px;
+			  font-size: 30px;
+			  text-align: center;
+			  background: white;
+			  border-radius: 20px;
+			}
+
+		body:not(.user-is-tabbing) button:focus,
+		body:not(.user-is-tabbing) input:focus,
+		body:not(.user-is-tabbing) select:focus,
+		body:not(.user-is-tabbing) textarea:focus {
+  				outline: none;
+			}
+		.example_e {
+				border: none;
+				background: #404040;
+				color: #ffffff !important;
+				font-weight: 100;
+				padding: 15px;
+				text-transform: uppercase;
+				border-radius: 6px;
+				display: inline-block;
+				transition: all 0.3s ease 0s;
+				}
+		.example_e:hover {
+				color: #404040 !important;
+				font-weight: 700 !important;
+				letter-spacing: 3px;
+				background: none;
+				-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+				-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+				transition: all 0.3s ease 0s;
+				}
+		input[type=submit]{
+				border: none;
+				background: #404040;
+				color: #ffffff !important;
+				font-weight: 100;
+				padding: 15px;
+				text-transform: uppercase;
+				border-radius: 6px;
+				display: inline-block;
+				transition: all 0.3s ease 0s;
+
+			}
+		input[type=submit]:hover {
+				color: #404040 !important;
+				font-weight: 700 !important;
+				letter-spacing: 3px;
+				background: none;
+				-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+				-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+				transition: all 0.3s ease 0s;
+				}
+		.back{
+
+			float: right;
+			padding-right: 570px;
+
+		}
+		.front{
+
+			float: left;
+			padding-left: 250px;
+		}
+
+
+	</style>
+
+
+</head>
+<body>
+
+	<!-- <form action="result">
+		Enter 1st number : <input type="text" name="num1"><br><br>
+		Enter 2nd number : <input type="text" name="num2"><br>
+		<input type="submit" name="btnsubmit">
+
+	</form>
+	 -->
+
+	 <div class="header">
+	 	<p>Paragraph Summarizing</p>
+	 </div>
+	
+		<form method="post" action="result_view" class="centercolumn" >
+			{% csrf_token %}
+			<textarea rows="10" cols="100" name="num" style="border-radius: 20px" ></textarea><br>
+
+			<input type="submit">
+
+			<div class="back" class="button_cont" align="center" class = "example_e"><a class="example_e" href="{% url 'project' %}" style="text-decoration: none;" rel="nofollow noopener">Back</a></div>
+
+		</form>
+</body>
+</html>
+
+
+{% endblock content %}

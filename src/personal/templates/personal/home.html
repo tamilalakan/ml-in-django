@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<title>Home</title>
+
+
+<style type="text/css">
+	body {
+		font-family: Arial;
+	  	padding: 3px;
+	  	background: #E0E0E0;
+	}
+	.header {
+		border-radius: 25px;
+		padding-right: 20px;
+		font-size: 20px;
+		text-align: center;
+		background: white;
+		padding-left: 20px;
+
+	}
+
+  .leftcolumn {   
+    float: left;
+    width: 50%;
+    border-radius: 20px; 
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 40px;
+  }
+
+  /* Right column */
+  .rightcolumn {
+    float: right;
+    width: 50%;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 40px;
+    border-radius: 20px;
+  }
+
+
+  /* Add a card effect for articles */
+  .card {
+     background-color: white;
+     padding: 10px;
+     margin-top: 30px;
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+ 
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+      width: 100%;
+      padding: 20;
+    }
+
+</style>
+
+
+
+
+<div class="pad" style="padding-left: 10px; padding-right:10px;">
+	<div class="header">
+	 <!-- Header -->
+		<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+		  <h3>― Albert Einstein</h3>
+		  <p class="lead">"I am enough of an artist to draw freely upon my imagination. Imagination is more important than knowledge. Knowledge is limited. Imagination encircles the world."</p>
+		</div>
+	</div>
+</div>
+
+<div class="row" >
+  <div class="leftcolumn">
+    
+
+    <div class="card" class="a" style="border-radius: 20px;"> 
+      <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+		  <h2>― Stephen Hawking</h2>
+		  <p class="lead" style="text-align: left;">Intelligence is the ability to adapt to change.<br>Life would be tragic if it weren't funny.<br>People who boast about their IQ are losers.</p>
+		</div>
+    </div>
+
+
+
+
+    <div class="card" style="border-radius: 20px;">
+      <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+		  <h2>― Elon Musk</h2>
+		  <p class="lead">“I am enough of an artist to draw freely upon my imagination. Imagination is more important than knowledge. Knowledge is limited. Imagination encircles the world.“</p>
+		</div>
+    </div>
+  
+  </div>
+
+
+  <div class="rightcolumn" >
+    
+    <div class="card" style="border-radius: 20px;">
+      <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+		  <h2>― Jack Ma</h2>
+		  <p class="lead">“Help young people. Help small guys. Because small guys will be big. Young people will have the seeds you bury in their minds, and when they grow up, they will change the world.“</p>
+		</div>
+    </div>
+    
+    <div class="card" style="border-radius: 20px;">
+      <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+		  <h2>― Bill Gates</h2>
+		  <p class="lead">“When a country has the skill and self-confidence to take action against its biggest problems, it makes outsiders eager to be a part of it.“</p>
+		</div></h4>
+    </div>
+  
+  </div>
+
+</div>
+
+<div class="pad" style="padding-left: 20px; padding-right: 20px;">
+	<div class="header" >
+	 <!-- Header -->
+		<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+		  <h2>― Steve Jobs</h2>
+		  <p class="lead">“Simple can be harder than complex: You have to work hard to get your thinking clean to make it simple. But it’s worth it in the end because once you get there, you can move mountains.”</p>
+		</div>
+	</div>
+</div>
+{% endblock content %}
